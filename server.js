@@ -4,7 +4,7 @@
 // על התוכנה יש להכיל את הדברים הבאים :
 // הכנסת ספר חדש למאגר , קבלת כל הספרים מהמהאגר , קבלת כל הספרים מהמאגר על פי שנה(נתון שנתקבל ב url param).
 // עדכון ספר , מחיקת ספר.
-
+require('dotenv').config()
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use('/api/books', require('./routes/books.route'));
 
 
-mongoose.connect('mongodb+srv://shadi:shakky17@cluster0.ksjui.mongodb.net/myBooks?retryWrites=true&w=majority',{ useNewUrlParser: true })
+mongoose.connect(`mongodb+srv://${process.env.DB_URL}/myBooks?retryWrites=true&w=majority`,{ useNewUrlParser: true })
 
 // mongodb+srv://shadi:<password>@cluster0.ksjui.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
