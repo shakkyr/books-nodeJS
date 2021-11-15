@@ -22,6 +22,6 @@ mongoose.connect('mongodb+srv://shadi:shakky17@cluster0.ksjui.mongodb.net/myBook
 // mongodb+srv://shadi:<password>@cluster0.ksjui.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
 
-app.listen(5001 || process.env.PORT ,  ()=>{
+app.listen( process.env.PORT ||5001,  ()=>{
     console.log('we are on server 5001');
 })
