@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.use('/api/books', require('./routes/books.route'));
 
 
-mongoose.connect('mongodb+srv://shadi:shakky17@cluster0.ksjui.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',{ useNewUrlParser: true })
+mongoose.connect('mongodb+srv://shadi:shakky17@cluster0.ksjui.mongodb.net/myBooks?retryWrites=true&w=majority',{ useNewUrlParser: true })
 
 // mongodb+srv://shadi:<password>@cluster0.ksjui.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
 
